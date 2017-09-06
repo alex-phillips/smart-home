@@ -27,6 +27,7 @@ http:
   api_password: !secret api_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: !secret base_url
+
   use_x_forwarded_for: true
 
 # Checks for available updates
