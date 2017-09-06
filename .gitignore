@@ -11,4 +11,5 @@ plex.conf
 *.sqlite
 *.txt
 *.swp
+.history/
 
