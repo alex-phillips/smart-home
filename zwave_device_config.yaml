@@ -1,0 +1,27 @@
+zwave.__4:
+  ignored: true
+  polling_intensity: 0
+zwave.__3:
+  ignored: true
+  polling_intensity: 0
+zwave.__2:
+  ignored: true
+  polling_intensity: 0
+zwave._:
+  ignored: true
+  polling_intensity: 0
+zwave.breakfast_nook:
+  ignored: false
+  polling_intensity: 2
+light.breakfast_nook_level:
+  ignored: false
+  polling_intensity: 2
+switch.switch:
+  ignored: false
+  polling_intensity: 2
+switch.porch_light_switch:
+  ignored: false
+  polling_intensity: 2
+zwave.porch_light:
+  ignored: false
+  polling_intensity: 2
