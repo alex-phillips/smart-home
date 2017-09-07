@@ -56,6 +56,8 @@ sun:
 device_tracker:
   - platform: gpslogger
 
+shopping_list:
+
 sensor: !include sensor.yaml
 zwave: !include zwave.yaml
 switch: !include switches.yaml

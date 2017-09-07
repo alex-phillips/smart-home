@@ -6,6 +6,7 @@ home-assistant.log
 home-assistant_v2.db
 deps/
 *.xml
+.shopping_list.json
 known_devices.yaml
 plex.conf
 *.sqlite
