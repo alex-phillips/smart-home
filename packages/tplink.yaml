@@ -1,0 +1,10 @@
+homeassistant:
+  customize:
+    switch.living_room:
+      friendly_name: Lamp
+
+
+switch:
+  # switch.living_room
+  - platform: tplink
+    host: 192.168.1.226

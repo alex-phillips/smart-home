@@ -1,0 +1,10 @@
+default_view:
+  name: default_view
+  view: true
+  entities:
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_minutely_summary
+    - device_tracker.alex
+    - device_tracker.spencer
+    - group.living_room
+    - group.kitchen

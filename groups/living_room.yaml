@@ -1,0 +1,5 @@
+living_room:
+  name: Living Room
+  entities:
+    - switch.living_room
+    - switch.porch_light_switch

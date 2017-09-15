@@ -1,0 +1,4 @@
+kitchen:
+  name: Kitchen
+  entities:
+    - light.breakfast_nook_level
