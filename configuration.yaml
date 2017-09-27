@@ -5,7 +5,6 @@ homeassistant:
   elevation: 92
   unit_system: imperial
   time_zone: America/New_York
-  customize: !include customize.yaml
   packages: !include_dir_named packages
 
 # Show links to resources in log and frontend
