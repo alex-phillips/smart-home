@@ -16,5 +16,6 @@ automation:
       - platform: time
         at: '23:00:00'
     action:
+      - delay: "00:{{- ((range(1,9) | random) ~ '').rjust(2, '0') -}}:00"
       - service: switch.turn_off
         entity_id: switch.porch_light_switch

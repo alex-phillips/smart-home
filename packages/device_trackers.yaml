@@ -1,3 +1,6 @@
+device_tracker:
+  - platform: gpslogger
+
 zone:
   - name: School
     latitude: 35.6896317

@@ -1,0 +1,7 @@
+sensor:
+  - platform: sonarr
+    api_key: !secret sonarr_key
+    host: openvpn
+    monitored_conditions:
+      - upcoming
+    days: 2

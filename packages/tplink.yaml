@@ -3,7 +3,6 @@ homeassistant:
     switch.living_room:
       friendly_name: Lamp
 
-
 switch:
   # switch.living_room
   - platform: tplink

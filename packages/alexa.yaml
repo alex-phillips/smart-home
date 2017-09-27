@@ -12,6 +12,4 @@ intent_script:
           {%- elif loop.last -%}
             I am sorry, I do not know where {{ User }} is.
           {%- endif -%}
-          {%- else -%}
-            Sorry, I don't have any trackers registered.
         {%- endfor -%}
