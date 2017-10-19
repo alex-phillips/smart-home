@@ -45,7 +45,7 @@ sun:
 
 shopping_list:
 
-group: !include_dir_* ui
+group: !include_dir_merge_named ui
 
 # Text to speech
 tts:
