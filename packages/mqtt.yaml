@@ -1,0 +1,6 @@
+mqtt:
+  broker: mosquitto
+  port: 1883
+  client_id: home-assistant
+  username: !secret mqtt_user
+  password: !secret mqtt_pass
