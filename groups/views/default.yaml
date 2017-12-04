@@ -6,5 +6,6 @@ default_view:
     - sensor.dark_sky_minutely_summary
     - device_tracker.alex
     - device_tracker.spencer
+    - group.master_bedroom
     - group.living_room
     - group.kitchen
