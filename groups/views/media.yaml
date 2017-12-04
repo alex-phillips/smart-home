@@ -1,5 +1,0 @@
-media_view:
-  name: Music
-  view: true
-  entities:
-    - media_player.living_room_2
