@@ -1,15 +1,15 @@
-device_tracker:
-  - platform: unifi
-    username: !secret unifi_username
-    password: !secret unifi_password
+# device_tracker:
+#   - platform: unifi
+#     username: !secret unifi_username
+#     password: !secret unifi_password
 
-zone:
-  - name: School
-    latitude: 35.6896317
-    longitude: -78.6152473
-    icon: mdi:school
+# zone:
+#   - name: School
+#     latitude: 35.6896317
+#     longitude: -78.6152473
+#     icon: mdi:school
 
-  - name: WRAL
-    latitude: 35.7798781
-    longitude: -78.6743573
-    radius: 250
+#   - name: WRAL
+#     latitude: 35.7798781
+#     longitude: -78.6743573
+#     radius: 250
