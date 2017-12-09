@@ -1,4 +1,4 @@
 living_room:
   name: Living Room
   entities:
-    - switch.porch_light_switch
+    - switch.christmas_tree
