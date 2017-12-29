@@ -1,5 +1,5 @@
 master_bedroom:
   name: Master Bedroom
   entities:
-    - switch.tplink_1
     - switch.sonoff1
+    - switch.tplink_1
