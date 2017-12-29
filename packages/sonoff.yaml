@@ -1,6 +1,6 @@
 switch:
   - platform: mqtt
-    name: "MB Lamp"
+    name: "sonoff1"
     command_topic: "cmnd/sonoff1/power"
     state_topic: "stat/sonoff1/POWER"
     qos: 1
