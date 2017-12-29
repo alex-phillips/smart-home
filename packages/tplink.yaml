@@ -1,7 +1,7 @@
 homeassistant:
   customize:
-    switch.master_bedroom_lamp:
-      friendly_name: Lamp
+    switch.tplink_1:
+      friendly_name: "Bathroom Outlet"
 
 switch:
   # master_bedroom_lamp
