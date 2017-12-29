@@ -11,6 +11,18 @@ automation:
       service: switch.turn_off
       entity_id: switch.tplink_1
 
+  - id: master_lights_off
+    alias: "Master lights off when away"
+    initial_state: True
+    trigger:
+      platform: state
+      entity_id: group.all_devices
+      from: 'home'
+      to: 'not_home'
+    action:
+      service: switch.turn_off
+      entity_id: switch.sonoff1
+
   # - id: evening_porch_on
   #   alias: 'Porch light on around sunset'
   #   trigger:
