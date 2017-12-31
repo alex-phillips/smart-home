@@ -2,6 +2,4 @@ automation_view:
   name: Automation
   view: true
   entities:
-    - automation.porch_light_on_around_sunset
-    - automation.turn_the_porch_light_off_at_night
-    - automation.dont_burn_the_house_down
+    - group.all_automations
