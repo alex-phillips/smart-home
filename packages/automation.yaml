@@ -1,3 +1,8 @@
+homeassistant:
+  customize:
+    group.all_automations:
+      hidden: false
+
 automation:
   - id: dont_burn_the_house_down
     alias: "Don't burn the house down"
