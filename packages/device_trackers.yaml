@@ -6,6 +6,8 @@ device_tracker:
     host: !secret unifi_host
     username: !secret unifi_username
     password: !secret unifi_password
+    verify_ssl: false
+    track_new_devices: false
 
 zone:
   - name: School
