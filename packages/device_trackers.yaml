@@ -1,6 +1,11 @@
 device_tracker:
   - platform: gpslogger
 
+device_tracker:
+  - platform: unifi
+    username: !secret unifi_username
+    password: !secret unifi_password
+
 zone:
   - name: School
     latitude: 35.6896317
