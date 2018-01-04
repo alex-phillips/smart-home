@@ -3,6 +3,7 @@ device_tracker:
 
 device_tracker:
   - platform: unifi
+    host: !secret unifi_host
     username: !secret unifi_username
     password: !secret unifi_password
 
