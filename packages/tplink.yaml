@@ -1,6 +1,6 @@
 homeassistant:
   customize:
-    switch.tplink_1:
+    switch.tplink_switch:
       friendly_name: "Bathroom Outlet"
 
 switch:
