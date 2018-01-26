@@ -10,12 +10,12 @@ device_tracker:
   - platform: gpslogger
 
 zone:
-  - name: School
-    latitude: 35.6896317
-    longitude: -78.6152473
+  - name: !secret school_name
+    latitude: !secret school_lat
+    longitude: !secret school_lon
     icon: mdi:school
 
-  - name: WRAL
-    latitude: 35.7798781
-    longitude: -78.6743573
+  - name: !secret work_name
+    latitude: !secret work_lat
+    longitude: !secret work_lon
     radius: 250
