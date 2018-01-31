@@ -1,9 +1,9 @@
 homeassistant:
   customize:
-    switch.tplink_switch:
+    switch.tplink_1:
       friendly_name: "Bathroom Outlet"
 
 switch:
-  # master_bedroom_lamp
+  # master bathroom outlet
   - platform: tplink
     host: 192.168.1.160
