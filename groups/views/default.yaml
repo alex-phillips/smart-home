@@ -1,5 +1,5 @@
 default_view:
-  name: default_view
+  name: Home
   view: true
   entities:
     - sensor.dark_sky_temperature
