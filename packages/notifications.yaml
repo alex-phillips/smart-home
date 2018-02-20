@@ -4,6 +4,7 @@
 #     allowed_chat_ids:
 #       - "-275563541"
 
-# notify:
-#   - name: telegram_notifier
-#     platform: telegram
+notify:
+  - name: pushbullet
+    platform: pushbullet
+    api_key: !secret pushbullet_api_key

@@ -102,3 +102,16 @@ automation:
       - service: frontend.set_theme
         data:
           name: default
+
+  - id: alex_home_notification
+    alias: 'Alex home notification'
+    trigger:
+      platform: state
+      entity_id: device_tracker.alex_unifi
+      from: 'not_home'
+      to: 'home'
+    action:
+      service: notify.pushbullet
+      data:
+        title: 'Alex is home'
+        message: 'Alex is home'
