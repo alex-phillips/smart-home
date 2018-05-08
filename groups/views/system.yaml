@@ -1,5 +1,0 @@
-system_view:
-  name: System
-  view: true
-  entities:
-    - sensor.sonarr_upcoming

@@ -1,4 +1,0 @@
-living_room:
-  name: Living Room
-  entities:
-    - switch.master_bedroom_lamp
