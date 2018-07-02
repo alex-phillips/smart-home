@@ -1,0 +1,4 @@
+bonus_room:
+  name: Bonus Room
+  entities:
+    - switch.sonoff2
