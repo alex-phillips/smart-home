@@ -6,4 +6,4 @@ homeassistant:
 switch:
   # master bathroom outlet
   - platform: tplink
-    host: 192.168.1.160
+    host: 192.168.1.100

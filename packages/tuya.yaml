@@ -1,0 +1,9 @@
+switch:
+  - platform: tuya
+    host: 192.168.1.170
+    local_key: xxxxxxxxxxxxxxxx
+    device_id: 05200743bcddc2e99def
+    switches:
+      switch1:
+        friendly_name: Switch 1
+        id: 1
