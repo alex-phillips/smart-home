@@ -14,8 +14,6 @@ switch:
     payload_on: "ON"
     payload_off: "OFF"
     retain: true
-
-switch:
   - platform: mqtt
     name: "sonoff2"
     command_topic: "cmnd/sonoff2/power"
