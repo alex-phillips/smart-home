@@ -8,7 +8,8 @@ device_tracker:
     new_device_defaults:
       track_new_devices: false
   - platform: gpslogger
-
+    password: !secret api_password
+ 
 zone:
   - name: !secret school_name
     latitude: !secret school_lat
