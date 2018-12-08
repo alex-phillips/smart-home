@@ -116,11 +116,20 @@ automation:
         title: 'Alex is home'
         message: 'Alex is home'
 
-  - id: screened_porch_on_at_night
-    alias: 'Screened porch lights on at night'
+  - id: screened_porch_on_at_sunet
+    alias: 'Screened porch lights on at sunset'
     trigger:
       - platform: sun
         event: sunset
     action:
       service: switch.turn_on
+      entity_id: switch.05200743bcddc2e99def
+
+  - id: screened_porch_of_at_11
+    alias: 'Screened porch lights off at 11'
+    trigger:
+      - platform: time
+        at: '23:00:00'
+    action:
+      service: switch.turn_off
       entity_id: switch.05200743bcddc2e99def
