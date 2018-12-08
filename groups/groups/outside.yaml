@@ -1,0 +1,4 @@
+outside:
+  name: Outside
+  entities:
+    - switch.05200743bcddc2e99def
