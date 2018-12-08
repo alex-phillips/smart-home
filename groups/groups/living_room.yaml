@@ -1,0 +1,4 @@
+living_room:
+  name: Living Room
+  entities:
+    - switch.05200743bcddc2e9a04d
