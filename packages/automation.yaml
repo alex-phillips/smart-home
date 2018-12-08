@@ -133,3 +133,12 @@ automation:
     action:
       service: switch.turn_off
       entity_id: switch.05200743bcddc2e99def
+
+  - id: christmas_tree_off_at_midnight
+    alias: 'Christmas tree off at midnight'
+    trigger:
+      - platform: time
+        at: '00:00:00'
+    action:
+      service: switch.turn_off
+      entity_id: switch.05200743bcddc2e9a04d
