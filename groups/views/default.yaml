@@ -8,5 +8,4 @@ default_view:
     - device_tracker.spencer
     - group.master_bedroom
     - group.bonus_room
-    - group.living_room
-    - group.outside
+    - group.downstairs

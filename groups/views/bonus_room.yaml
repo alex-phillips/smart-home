@@ -1,5 +1,0 @@
-bonus_room_view:
-  name: Bonus Room
-  view: true
-  entities:
-    - remote.bonus_room

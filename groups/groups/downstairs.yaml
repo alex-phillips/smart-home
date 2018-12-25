@@ -1,0 +1,6 @@
+downstairs:
+  name: Downstairs
+  entities:
+    - switch.05200743bcddc2e9a04d
+    - switch.05200743bcddc2e99def
+    - light.kitchen_accent
