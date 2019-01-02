@@ -38,6 +38,11 @@ map:
 conversation:
 
 alexa:
+  smart_home:
+
+google_assistant:
+  project_id: !secret google_project_id
+  api_key: !secret google_api_key
 
 # Enables support for tracking state changes over time
 history:
