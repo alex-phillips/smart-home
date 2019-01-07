@@ -1,14 +1,13 @@
 # Turn on the master bedroom lights at night IF someone is home
-- id: master_lights_on_at_night
-  alias: "Master lights on at night if someone is home"
-  initial_state: False
-  trigger:
-    - platform: sun
-      event: sunset
-  condition:
-    - condition: state
-      entity_id: group.all_devices
-      state: 'home'
-  action:
-    service: switch.turn_on
-    entity_id: switch.sonoff1
+alias: "Master lights on at night if someone is home"
+initial_state: False
+trigger:
+  - platform: sun
+    event: sunset
+condition:
+  - condition: state
+    entity_id: group.all_devices
+    state: 'home'
+action:
+  service: switch.turn_on
+  entity_id: switch.sonoff1

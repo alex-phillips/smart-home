@@ -1,9 +1,8 @@
-- id: theme_dark_at_night
-  alias: 'Dark theme at night'
-  trigger:
-    - platform: sun
-      event: sunset
-  action:
-    - service: frontend.set_theme
-      data:
-        name: midnight
+alias: 'Dark theme at night'
+trigger:
+  - platform: sun
+    event: sunset
+action:
+  - service: frontend.set_theme
+    data:
+      name: midnight

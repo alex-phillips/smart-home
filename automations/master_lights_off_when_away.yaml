@@ -1,12 +1,11 @@
 # Turn off the master bedroom lights when noone is home
-- id: master_lights_off_when_away
-  alias: "Master lights off when away"
-  initial_state: True
-  trigger:
-    platform: state
-    entity_id: group.all_devices
-    from: 'home'
-    to: 'not_home'
-  action:
-    - service: switch.turn_off
-      entity_id: switch.sonoff1
+alias: "Master lights off when away"
+initial_state: True
+trigger:
+  platform: state
+  entity_id: group.all_devices
+  from: 'home'
+  to: 'not_home'
+action:
+  - service: switch.turn_off
+    entity_id: switch.sonoff1

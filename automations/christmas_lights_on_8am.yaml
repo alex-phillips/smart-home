@@ -1,10 +1,9 @@
-- id: christmas_lights_on_8am
-  alias: "Christmas lights on at 8am"
-  trigger:
-    - platform: time
-      at: '08:00:00'
-  action:
-    - service: switch.turn_on
-      entity_id: switch.05200743bcddc2e9a04d
-    - service: light.turn_on
-      entity_id: light.kitchen_accent
+alias: "Christmas lights on at 8am"
+trigger:
+  - platform: time
+    at: '08:00:00'
+action:
+  - service: switch.turn_on
+    entity_id: switch.05200743bcddc2e9a04d
+  - service: light.turn_on
+    entity_id: light.kitchen_accent

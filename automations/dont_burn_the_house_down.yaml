@@ -1,12 +1,11 @@
 # Turn off the bathroom outlet when Spencer leaves
-- id: dont_burn_the_house_down
-  alias: "Don't burn the house down"
-  initial_state: True
-  trigger:
-    platform: state
-    entity_id: device_tracker.spencer_unifi
-    from: 'home'
-    to: 'not_home'
-  action:
-    service: switch.turn_off
-    entity_id: switch.tplink_1
+alias: "Don't burn the house down"
+initial_state: True
+trigger:
+  platform: state
+  entity_id: device_tracker.spencer_unifi
+  from: 'home'
+  to: 'not_home'
+action:
+  service: switch.turn_off
+  entity_id: switch.tplink_1
