@@ -1,7 +1,6 @@
 # Turn on the master bedroom lights when someone gets home
 # if it is nighttime
 alias: "Master lights on when someone gets home"
-initial_state: False
 trigger:
   platform: state
   entity_id: group.all_devices

@@ -1,6 +1,5 @@
 # Turn on the master bedroom lights at night IF someone is home
 alias: "Master lights on at night if someone is home"
-initial_state: False
 trigger:
   - platform: sun
     event: sunset
