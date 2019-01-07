@@ -1,0 +1,21 @@
+alias: Turn night mode on cameras to auto at Sunet
+trigger:
+  - event: sunrise
+    platform: sun
+action:
+  # - data:
+  #     topic: "Home/camera1/ir_cut/set"
+  #     payload: "ON"
+  #   service: mqtt.publish
+  # - service: mqtt.publish
+  #   data:
+  #     topic: "Home/camera1/ir/set"
+  #     payload: "ON"
+  # - service: mqtt.publish
+  #   data:
+  #     topic: "Home/camera1/night_mode/set"
+  #     payload: "ON"
+  - service: mqtt.publish
+    data:
+    topic: "myhome/camera1/night_mode/auto/set"
+    payload: "OFF"
