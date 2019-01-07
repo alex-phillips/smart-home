@@ -1,103 +1,107 @@
-title: My Lovely Home Automation
+title: Home
 views:
   - title: Home
+    badges:
+      - device_tracker.alex
+      - device_tracker.spencer
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_minutely_summary
     cards:
       - type: entities
-        title: Automations
+        title: Master Bedroom
         show_header_toggle: true
         entities:
-          - group.all_automations
-
-      - type: entity-filter
-        title: Device Trackers
-        show_header_toggle: true
-        entities:
-          - device_tracker.alex
-          - device_tracker.alex_unifi
-          - device_tracker.spencer
-          - device_tracker.spencer_unifi
-        state_filter:
-          - 'home'
-        card:
-          type: glance
-          title: My Device Trackers
-
-
-      - type: entities
-        title: Groups
-        show_header_toggle: true
-        entities:
-          - group.all_automations
-          - group.all_devices
-          - group.all_lights
-          - group.all_remotes
-          - group.all_switches
-          - group.automation_view
-          - group.bonus_room
-          - group.default_view
-          - group.downstairs
-          - group.kitchen
-          - group.master_bedroom
-          - group.media_view
-          - group.weather
-
-      - type: entities
-        title: Input Booleans
-        show_header_toggle: true
-        entities:
-          - input_boolean.enable_motion_detect_nursery
-          - input_boolean.motion_detect_nursery_debounce
-          - input_boolean.test_switch
-
-      - type: entities
-        title: Light
-        show_header_toggle: true
-        entities:
-          - light.kitchen_accent
-
-      - type: entities
-        title: Remote
-        show_header_toggle: true
-        entities:
-          - remote.bonus_room
-
-      - type: entities
-        title: Sensors
-        show_header_toggle: true
-        entities:
-          - sensor.dark_sky_hourly_summary
-          - sensor.dark_sky_minutely_summary
-          - sensor.dark_sky_summary
-          - sensor.dark_sky_temperature
-
-      - type: entities
-        title: Sun
-        show_header_toggle: true
-        entities:
-          - sun.sun
-
-      - type: entities
-        title: Switchs
-        show_header_toggle: true
-        entities:
-          - switch.05200743bcddc2e99def
-          - switch.05200743bcddc2e9a04d
-          - switch.front_porch
           - switch.sonoff1
-          - switch.sonoff2
           - switch.tplink_1
-
       - type: entities
-        title: Zones
+        title: Downstairs
         show_header_toggle: true
         entities:
-          - zone.home
-          - zone.school
-          - zone.wral
-
+          - switch.front_porch
+          - switch.05200743bcddc2e9a04d
+          - switch.05200743bcddc2e99def
+          - light.kitchen_accent
       - type: entities
-        title: Zwaves
+        title: Bonus Room
         show_header_toggle: true
         entities:
-          - zwave.aeotec_dsa02203_zstick_s2
-          - zwave.ge_14292_inwall_smart_toggle_switch
+          - switch.sonoff2
+
+  - title: Automations
+    cards:
+      - type: entities
+        title: Lights and Switches
+        entities:
+          - automation.dont_burn_the_house_down
+          - automation.master_lights_off_when_away
+          - automation.master_lights_on_at_night_if_someone_is_home
+          - automation.master_lights_on_when_someone_gets_home
+
+      - type: entities
+        title: Themes
+        entities:
+          - automation.dark_theme_at_night
+          - automation.light_theme_during_the_day
+
+      - type: entities
+        title: Outside Lights
+        entities:
+          - automation.porch_light_on_around_sunset
+          - automation.screened_porch_lights_off_at_night
+          - automation.screened_porch_lights_on_at_sunset
+          - automation.turn_the_porch_light_off_at_night
+
+      - type: entities
+        title: Cameras
+        entities:
+          - automation.motion_detected_in_nursery
+          - automation.reset_nursery_motion_detection_debounce
+          - automation.turn_night_mode_on_cameras_off_at_sunrise
+          - automation.turn_night_mode_on_cameras_to_auto_at_sunet
+
+      - type: entities
+        title: Christmas
+        entities:
+          - automation.christmas_lights_off_at_midnight
+          - automation.christmas_lights_on_at_8am
+
+      # - type: entity-filter
+      #   title: Device Trackers
+      #   show_header_toggle: true
+      #   entities:
+      #     - device_tracker.alex
+      #     - device_tracker.alex_unifi
+      #     - device_tracker.spencer
+      #     - device_tracker.spencer_unifi
+      #   state_filter:
+      #     - 'home'
+      #   card:
+      #     type: glance
+      #     title: My Device Trackers
+
+      # - type: entities
+      #   title: Input Booleans
+      #   show_header_toggle: true
+      #   entities:
+      #     - input_boolean.enable_motion_detect_nursery
+      #     - input_boolean.motion_detect_nursery_debounce
+      #     - input_boolean.test_switch
+
+      # - type: entities
+      #   title: Light
+      #   show_header_toggle: true
+      #   entities:
+      #     - light.kitchen_accent
+
+      # - type: entities
+      #   title: Remote
+      #   show_header_toggle: true
+      #   entities:
+      #     - remote.bonus_room
+
+      # - type: entities
+      #   title: Zwaves
+      #   show_header_toggle: true
+      #   entities:
+      #     - zwave.aeotec_dsa02203_zstick_s2
+      #     - zwave.ge_14292_inwall_smart_toggle_switch
