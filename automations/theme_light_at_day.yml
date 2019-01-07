@@ -1,0 +1,9 @@
+- id: theme_light_at_day
+  alias: 'Light theme during the day'
+  trigger:
+    - platform: sun
+      event: sunrise
+  action:
+    - service: frontend.set_theme
+      data:
+        name: default

@@ -1,0 +1,32 @@
+# Notify if motion in nursery
+- id: motion_detected_nursery
+  alias: 'Motion detected in nursery'
+  trigger:
+    payload: 'ON'
+    platform: mqtt
+    topic: myhome/camera1/motion
+  condition:
+    - condition: state
+      entity_id: input_boolean.enable_motion_detect_nursery
+      state: "on"
+    - condition: state
+      entity_id: input_boolean.motion_detect_nursery_debounce
+      state: "off"
+  action:
+    - service: notify.telegram_alex
+      data_template:
+        message: "Motion detected in nursery"
+    - service: notify.telegram_spencer
+      data_template:
+        message: "Motion detected in nursery"
+    - service: notify.motion_detect_nursery
+      data_template:
+        message: "Motion detected in nursery"
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.motion_detect_nursery_debounce
+
+- id: reset_motion_detected_nursery_debounce
+  alias: "Reset nursery motion detection debounce"
+  trigger:
+    platform: state
+    entity_id: input_boolean.motion_detect_nursery_debounce

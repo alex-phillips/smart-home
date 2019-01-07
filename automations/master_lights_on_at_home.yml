@@ -1,0 +1,17 @@
+# Turn on the master bedroom lights when someone gets home
+# if it is nighttime
+- id: master_lights_on_at_home
+  alias: "Master lights on when someone gets home"
+  initial_state: False
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    from: 'not_home'
+    to: 'home'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+  action:
+    service: switch.turn_on
+    entity_id: switch.sonoff1
