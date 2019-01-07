@@ -2,7 +2,7 @@ input_boolean:
   test_switch:
     initial: off
   enable_motion_detect_nursery:
-    initial: off
+    initial: on
     name: "Enable nursery motion detection"
     icon: mdi:run-fast
   motion_detect_nursery_debounce:
