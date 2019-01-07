@@ -1,4 +1,4 @@
-alias: Turn night mode on cameras to auto at Sunet
+alias: Turn night mode on cameras off at Sunrise
 trigger:
   - event: sunrise
     platform: sun
