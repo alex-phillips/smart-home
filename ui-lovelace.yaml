@@ -1,0 +1,103 @@
+title: My Lovely Home Automation
+views:
+  - title: Home
+    cards:
+      - type: entities
+        title: Automations
+        show_header_toggle: true
+        entities:
+          - group.all_automations
+
+      - type: entity-filter
+        title: Device Trackers
+        show_header_toggle: true
+        entities:
+          - device_tracker.alex
+          - device_tracker.alex_unifi
+          - device_tracker.spencer
+          - device_tracker.spencer_unifi
+        state_filter:
+          - 'home'
+        card:
+          type: glance
+          title: My Device Trackers
+
+
+      - type: entities
+        title: Groups
+        show_header_toggle: true
+        entities:
+          - group.all_automations
+          - group.all_devices
+          - group.all_lights
+          - group.all_remotes
+          - group.all_switches
+          - group.automation_view
+          - group.bonus_room
+          - group.default_view
+          - group.downstairs
+          - group.kitchen
+          - group.master_bedroom
+          - group.media_view
+          - group.weather
+
+      - type: entities
+        title: Input Booleans
+        show_header_toggle: true
+        entities:
+          - input_boolean.enable_motion_detect_nursery
+          - input_boolean.motion_detect_nursery_debounce
+          - input_boolean.test_switch
+
+      - type: entities
+        title: Light
+        show_header_toggle: true
+        entities:
+          - light.kitchen_accent
+
+      - type: entities
+        title: Remote
+        show_header_toggle: true
+        entities:
+          - remote.bonus_room
+
+      - type: entities
+        title: Sensors
+        show_header_toggle: true
+        entities:
+          - sensor.dark_sky_hourly_summary
+          - sensor.dark_sky_minutely_summary
+          - sensor.dark_sky_summary
+          - sensor.dark_sky_temperature
+
+      - type: entities
+        title: Sun
+        show_header_toggle: true
+        entities:
+          - sun.sun
+
+      - type: entities
+        title: Switchs
+        show_header_toggle: true
+        entities:
+          - switch.05200743bcddc2e99def
+          - switch.05200743bcddc2e9a04d
+          - switch.front_porch
+          - switch.sonoff1
+          - switch.sonoff2
+          - switch.tplink_1
+
+      - type: entities
+        title: Zones
+        show_header_toggle: true
+        entities:
+          - zone.home
+          - zone.school
+          - zone.wral
+
+      - type: entities
+        title: Zwaves
+        show_header_toggle: true
+        entities:
+          - zwave.aeotec_dsa02203_zstick_s2
+          - zwave.ge_14292_inwall_smart_toggle_switch
