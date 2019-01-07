@@ -17,5 +17,5 @@ action:
   #     payload: "ON"
   - service: mqtt.publish
     data:
-    topic: "myhome/camera1/night_mode/auto/set"
-    payload: "OFF"
+      topic: "myhome/camera1/night_mode/auto/set"
+      payload: "OFF"
