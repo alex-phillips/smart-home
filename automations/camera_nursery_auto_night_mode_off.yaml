@@ -21,5 +21,9 @@ action:
       payload: "OFF"
   - service: mqtt.publish
     data:
+      topic: "myhome/camera1/night_mode/set"
+      payload: "OFF"
+  - service: mqtt.publish
+    data:
       topic: "myhome/camera1/ir/set"
       payload: "OFF"
