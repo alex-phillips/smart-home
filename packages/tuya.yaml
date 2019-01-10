@@ -1,4 +1,19 @@
-tuya:
-  username: 3363919013
-  password: Applep13
-  country_code: 1
+#tuya:
+#  username: 3363919013
+#  password: Applep13
+#  country_code: 1
+
+switch:
+  - platform: tuya_local
+    name: Christmas Tree
+    host: 192.168.1.101
+    local_key: 47a26cab76e55eed
+    device_id: 05200743bcddc2e99def
+    id: 1
+  - platform: tuya_local
+    name: Porch Lights
+    host: 192.168.1.102
+    local_key: 38de5b29eb3d678a
+    device_id: 05200743bcddc2e9a04d
+    id: 2
+
