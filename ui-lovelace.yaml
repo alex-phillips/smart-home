@@ -18,8 +18,8 @@ views:
         show_header_toggle: true
         entities:
           - switch.front_porch
-          - switch.05200743bcddc2e9a04d
-          - switch.05200743bcddc2e99def
+          - switch.christmas_tree
+          - switch.porch_lights
           - light.kitchen_accent
       - type: entities
         title: Bonus Room
