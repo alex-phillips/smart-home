@@ -10,7 +10,7 @@ switch:
     local_key: 47a26cab76e55eed
     device_id: 05200743bcddc2e99def
   - platform: tuya_local
-    name: Christmas Tree
+    name: Downstairs Lamp
     host: 192.168.1.102
     local_key: d6a54e23ef5d4163
     device_id: 05200743bcddc2e9a04d
