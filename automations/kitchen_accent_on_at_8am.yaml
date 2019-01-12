@@ -1,0 +1,7 @@
+alias: "Kitchen accent lights on at 8am"
+trigger:
+  - platform: time
+    at: '08:00:00'
+action:
+  - service: light.turn_on
+    entity_id: light.kitchen_accent
