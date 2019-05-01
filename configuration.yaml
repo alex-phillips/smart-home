@@ -12,6 +12,7 @@ homeassistant:
 
 # Enable the frontend
 frontend:
+  javascript_version: latest
   themes: !include_dir_merge_named themes
 
 lovelace:
@@ -58,6 +59,13 @@ shopping_list:
 #                                                                              #
 # COMPONENTS                                                                   #
 #                                                                              #
+################################################################################
+
+################################################################################
+# Custom Updater
+#
+# https://github.com/custom-components/custom_updater
+custom_updater:
 ################################################################################
 
 ################################################################################
