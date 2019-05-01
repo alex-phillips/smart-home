@@ -2,7 +2,7 @@ homeassistant:
   name: Home
   latitude: !secret latitude
   longitude: !secret longitude
-  elevation: 92
+  elevation: 17
   unit_system: imperial
   time_zone: America/New_York
   whitelist_external_dirs:
@@ -12,38 +12,38 @@ homeassistant:
     group.all_automations:
       hidden: false
 
-# Show links to resources in log and frontend
-#introduction:
+# Enable the frontend
+frontend:
+  themes: !include_dir_merge_named themes
 
 lovelace:
   mode: yaml
 
-system_health:
-
-# Enables the frontend
-frontend:
-  themes: !include_dir_merge_named themes
-
-automation: !include_dir_list automations
-
-mqtt:
-  broker: 192.168.1.91
-  # password: !secret mqtt_password
-
-logger:
-  default: warning
-  logs:
-    homeassistant.components.mqtt: debug
-    aiounifi: debug
-    homeassistant.components.unifi: debug
-
-ffmpeg:
-  ffmpeg_bin: /usr/bin/ffmpeg
-
 # Enables configuration UI
 config:
 
+http:
+  base_url: !secret base_url
+  use_x_forwarded_for: true
+  trusted_proxies: 172.18.0.0/32
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
 map:
+
+# https://www.home-assistant.io/components/system_health/
+system_health:
+
+# Track the sun (sunrise/sunset events)
+sun:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -54,34 +54,177 @@ map:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
 
-# Discover some devices automatically
-# discovery:
+shopping_list:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
+################################################################################
+#                                                                              #
+# COMPONENTS                                                                   #
+#                                                                              #
+################################################################################
 
+################################################################################
+# Send data to InfluxDB
+#
+# https://www.home-assistant.io/components/influxdb/
+influxdb:
+  host: influxdb
+################################################################################
+
+################################################################################
+# MQTT Server
+#
+# https://www.home-assistant.io/components/mqtt/
+mqtt:
+  broker: 192.168.1.91
+  # password: !secret mqtt_password
+################################################################################
+
+################################################################################
+# Log activities in Home Assistant
+#
+# https://www.home-assistant.io/components/logger/
+logger:
+  default: warning
+  # logs:
+  #   homeassistant.components.mqtt: debug
+  #   aiounifi: debug
+  #   homeassistant.components.unifi: debug
+################################################################################
+
+################################################################################
+# Enable ffmpeg for use of cameras
+#
+# https://www.home-assistant.io/components/ffmpeg/
+ffmpeg:
+################################################################################
+
+################################################################################
+# Enable control via Amazon Echo
+#
+# https://www.home-assistant.io/components/alexa/
 alexa:
   smart_home:
+################################################################################
 
+################################################################################
+# Enable control via Google Home
+#
+# https://www.home-assistant.io/components/google_assistant/
 google_assistant:
   project_id: !secret google_project_id
   api_key: !secret google_api_key
-
-# Enables support for tracking state changes over time
-history:
-
-# View all events in a logbook
-logbook:
-
-# Track the sun
-sun:
-
-shopping_list:
+################################################################################
 
 group: !include_dir_merge_named groups
 
-# Text to speech
-tts:
-  - platform: google_translate
-    service_name: google_say
 
+################################################################################
+# Custom Switches in Home Assistant
+#
+# https://www.home-assistant.io/components/switch/
+switch: !include_dir_merge_list components/switches
+################################################################################
+
+################################################################################
+# Custom lights in Home Assistant
+#
+# https://www.home-assistant.io/components/light/
+light: !include_dir_merge_list components/lights
+################################################################################
+
+################################################################################
+# Tracking all devices through Home Assistant
+#  - Bluetooth
+#  - Router
+#  - GPS
+# https://www.home-assistant.io/components/device_tracker/
+device_tracker: !include components/device_tracker.yaml
+################################################################################
+
+################################################################################
+# This handles my automations within Home Assistant
+#
+# https://www.home-assistant.io/docs/automation/
+automation: !include_dir_list components/automations
+################################################################################
+
+################################################################################
+# All custom scripts that do multiple actions with one call
+#
+# https://www.home-assistant.io/components/script/
+script: !include_dir_merge_named components/scripts
+################################################################################
+
+################################################################################
+# All custom scripts that do multiple actions with one call
+#
+# https://www.home-assistant.io/components/shell_command/
+shell_command: !include_dir_merge_named components/shell_commands
+################################################################################
+
+################################################################################
+# Zones allow you to specify certain regions on earth (for now).
+#
+# https://www.home-assistant.io/components/zone/
+#
+zone: !include_dir_merge_list components/zones
+################################################################################
+
+################################################################################
+# Allows connection of multiple device tracer entities to a single person
+#
+# https://www.home-assistant.io/components/person/
+person: !include_dir_merge_list people/
+################################################################################
+
+################################################################################
+# Send messages to Telegram
+#
+# https://www.home-assistant.io/components/telegram/
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api_key
+    allowed_chat_ids:
+      - !secret telegram_chat_id1
+      - !secret telegram_chat_id2
+################################################################################
+
+################################################################################
+# Notifications
+#
+# https://www.home-assistant.io/components/notify/
+notify: !include_dir_merge_list components/notifications
+################################################################################
+
+################################################################################
+# TP-Link devices
+#
+# https://www.home-assistant.io/components/tplink/
+tplink: !include components/tplink.yaml
+################################################################################
+
+################################################################################
+# Z-Wave configuration
+#
+# https://www.home-assistant.io/components/zwave/
+zwave:
+  usb_path: /dev/ttyUSB0
+  device_config: !include ./zwave_device_config.yaml
+################################################################################
+
+#######################################################################################
+# The input_boolean component allows the user to define boolean values that
+# can be controlled via the frontend and can be used within conditions of
+# automation. This can for example be used to disable or enable certain
+# automations.
+#
+# https://www.home-assistant.io/components/input_boolean/
+input_boolean: !include_dir_merge_named components/input_booleans
+#######################################################################################
+
+#######################################################################################
+# All Sensors that are in Home Assistant
+#
+# https://www.home-assistant.io/components/sensor
+sensor: !include_dir_merge_list components/sensors
+#######################################################################################

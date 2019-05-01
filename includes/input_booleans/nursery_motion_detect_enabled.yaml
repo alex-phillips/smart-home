@@ -1,0 +1,4 @@
+nursery_motion_detect_enabled:
+  initial: on
+  name: "Enable nursery motion detection"
+  icon: mdi:run-fast

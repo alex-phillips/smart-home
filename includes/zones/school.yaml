@@ -1,0 +1,4 @@
+- name: !secret school_name
+  latitude: !secret school_lat
+  longitude: !secret school_lon
+  icon: mdi:school

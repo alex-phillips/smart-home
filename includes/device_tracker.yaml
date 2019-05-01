@@ -1,0 +1,11 @@
+- platform: unifi
+  host: !secret unifi_host
+  username: !secret unifi_username
+  password: !secret unifi_password
+  verify_ssl: false
+  track_new_devices: false
+  new_device_defaults:
+    track_new_devices: false
+
+- platform: gpslogger
+  password: !secret api_password

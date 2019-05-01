@@ -6,7 +6,7 @@
 #   topic: myhome/camera1/motion
 # condition:
 #   - condition: state
-#     entity_id: input_boolean.enable_motion_detect_nursery
+#     entity_id: input_boolean.nursery_motion_detect_enabled
 #     state: "on"
 # action:
 #   - service: notify.motion_detect_nursery # despite this having a message, this is the API call to start motion recording

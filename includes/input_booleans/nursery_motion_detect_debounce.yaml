@@ -1,0 +1,3 @@
+nursery_motion_detect_debounce:
+  initial: off
+  name: "Nursery motion detection debounce"

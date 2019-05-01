@@ -1,0 +1,32 @@
+- platform: mqtt
+  schema: json
+  name: "Kitchen Accent"
+  state_topic: "leds/kitchen"
+  command_topic: "leds/kitchen/set"
+  effect: true
+  effect_list:
+    - christmas
+    - bpm
+    - candy cane
+    - confetti
+    - cyclon rainbow
+    - dots
+    - fire
+    - glitter
+    - juggle
+    - lightning
+    - noise
+    - police all
+    - police one
+    - rainbow
+    - rainbow with glitter
+    - ripple
+    - sinelon
+    - solid
+    - twinkle
+    - gunshots
+  brightness: true
+  #flash: true
+  rgb: true
+  optimistic: false
+  qos: 0

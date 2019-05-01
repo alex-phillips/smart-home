@@ -1,0 +1,36 @@
+
+###############################################
+#                                             #
+#                  Customize                  #
+#                                             #
+###############################################
+
+
+###############################################
+## WEATHER
+###############################################
+sensor.dark_sky_temperature:
+  friendly_name: Temp
+sensor.dark_sky_minutely_summary:
+  friendy_name: Right Now
+
+###############################################
+## DIMMERS
+###############################################
+light.breakfast_nook_level:
+  friendly_name: Breakfast Nook
+
+###############################################
+## SWITCHES
+###############################################
+switch.front_porch:
+  friendly_name: Front Porch
+
+switch.kitchen_table:
+  friendly_name: Kitchen Table
+
+switch.sonoff1:
+  friendly_name: "Lamp"
+
+switch.sonoff2:
+  friendly_name: "Lamp"

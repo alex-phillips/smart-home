@@ -1,0 +1,4 @@
+# hit API endpoint to trigger motion detection to start recording
+- name: motion_detect_nursery
+  platform: rest
+  resource: !secret nursery_record_url

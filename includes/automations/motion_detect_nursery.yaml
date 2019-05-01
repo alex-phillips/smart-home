@@ -9,10 +9,10 @@ trigger:
   topic: myhome/camera1/motion
 condition:
   - condition: state
-    entity_id: input_boolean.enable_motion_detect_nursery
+    entity_id: input_boolean.nursery_motion_detect_enabled
     state: "on"
   - condition: state
-    entity_id: input_boolean.motion_detect_nursery_debounce
+    entity_id: input_boolean.nusery_motion_detect_debounce
     state: "off"
 action:
   #- service: script.turn_on
@@ -24,4 +24,4 @@ action:
     data:
       message: "Motion detected in the nursery"
   - service: input_boolean.turn_on
-    entity_id: input_boolean.motion_detect_nursery_debounce
+    entity_id: input_boolean.nusery_motion_detect_debounce

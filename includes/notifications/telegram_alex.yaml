@@ -1,0 +1,4 @@
+# send telegram message to alex
+- name: telegram_alex
+  platform: telegram
+  chat_id: !secret telegram_chat_id1

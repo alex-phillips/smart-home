@@ -1,0 +1,3 @@
+- platform: ffmpeg
+  name: Nursery
+  input: -rtsp_transport tcp -i rtsp://root:phillips15@192.168.1.72/live
