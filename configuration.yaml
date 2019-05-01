@@ -5,6 +5,8 @@ homeassistant:
   elevation: 92
   unit_system: imperial
   time_zone: America/New_York
+  whitelist_external_dirs:
+    - /tmp
   packages: !include_dir_named packages
   customize:
     group.all_automations:
@@ -16,18 +18,27 @@ homeassistant:
 lovelace:
   mode: yaml
 
+system_health:
+
 # Enables the frontend
 frontend:
   themes: !include_dir_merge_named themes
 
 automation: !include_dir_list automations
 
-ffmpeg:
-  ffmpeg_bin: /usr/bin/ffmpeg
-
 mqtt:
   broker: 192.168.1.91
   # password: !secret mqtt_password
+
+logger:
+  default: warning
+  logs:
+    homeassistant.components.mqtt: debug
+    aiounifi: debug
+    homeassistant.components.unifi: debug
+
+ffmpeg:
+  ffmpeg_bin: /usr/bin/ffmpeg
 
 # Enables configuration UI
 config:
@@ -71,5 +82,6 @@ group: !include_dir_merge_named groups
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 

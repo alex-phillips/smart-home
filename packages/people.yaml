@@ -1,0 +1,13 @@
+person:
+  - name: Alex
+    id: alex1030
+    user_id: 0be557f144c444c48ea1f6c898f6ac17
+    device_trackers:
+      - device_tracker.alex
+      - device_tracker.alex_unifi
+  - name: Spencer
+    id: spencer0917
+    user_id: a240e35795004991ad0fe78f930a6908
+    device_trackers:
+      - device_tracker.spencer
+      - device_tracker.spencer_unifi

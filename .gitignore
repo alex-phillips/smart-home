@@ -13,4 +13,5 @@ plex.conf
 *.txt
 *.swp
 .history/
+.storage/
 

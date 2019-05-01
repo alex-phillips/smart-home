@@ -12,6 +12,9 @@ homeassistant:
     switch.front_porch:
       friendly_name: Front Porch
 
+    switch.kitchen_table:
+      friendly_name: Kitchen Table
+
 zwave:
-  usb_path: /dev/ttyUSB1
+  usb_path: /dev/ttyUSB0
   device_config: !include ../zwave_device_config.yaml

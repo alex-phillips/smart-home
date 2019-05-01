@@ -12,13 +12,19 @@ views:
         show_header_toggle: true
         entities:
           - switch.sonoff1
-          - switch.tplink_1
+          - entity: switch.master_bathroom_outlet
+            name: Bathroom Outlet
       - type: entities
         title: Downstairs
         show_header_toggle: true
         entities:
           - switch.front_porch
-          - switch.christmas_tree
+          - entity: switch.downstairs_lamp
+            name: Lamp
+          - switch.foyer
+          - switch.breakfast_nook
+          - switch.bar_pendants
+          - light.dining_room
           - switch.porch_lights
           - light.kitchen_accent
       - type: entities
@@ -32,10 +38,12 @@ views:
       - type: entities
         title: Lights and Switches
         entities:
-          - automation.dont_burn_the_house_down
+          - automation.don_t_burn_the_house_down
           - automation.master_lights_off_when_away
           - automation.master_lights_on_at_night_if_someone_is_home
           - automation.master_lights_on_when_someone_gets_home
+          - automation.kitchen_accent_lights_on_at_8am
+          - automation.kitchen_accent_lights_off_at_midnight
 
       - type: entities
         title: Themes
@@ -56,8 +64,8 @@ views:
         entities:
           - automation.motion_detected_in_nursery
           - automation.reset_nursery_motion_detection_debounce
-          - automation.turn_night_mode_on_cameras_off_at_sunrise
-          - automation.turn_night_mode_on_cameras_to_auto_at_sunet
+          #- automation.turn_night_mode_on_cameras_off_at_sunrise
+          #- automation.turn_night_mode_on_cameras_to_auto_at_sunet
 
       - type: entities
         title: Christmas

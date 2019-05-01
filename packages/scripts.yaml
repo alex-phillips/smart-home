@@ -1,0 +1,39 @@
+script:
+  nursery_screenshot_notification:
+    sequence:
+      - service: shell_command.nursery_video_capture
+      - delay:
+          seconds: 5
+      - service: notify.telegram_alex
+        data:
+          message: "Motion detected in nursery"
+          data:
+            video:
+              - file: "/tmp/nursery_video.mp4"
+                caption: "Motion detected in nursery"
+      - service: notify.telegram_spencer
+        data:
+          message: "Motion detected in nursery"
+          data:
+            video:
+              - file: "/tmp/nursery_video.mp4"
+                caption: "Motion detected in nursery"
+  murder_mystery_murder:
+     sequence:
+       - service: notify.telegram_alex
+         data:
+           message: "Someone got murdered!!"
+       - delay:
+           seconds: 2
+       - service: light.turn_off
+         entity_id: light.dining_room
+       - service: switch.turn_off
+         entity_id: group.downstairs
+       - delay:
+           seconds: 1
+       - service: light.turn_on
+         entity_id: light.kitchen_accent
+       - delay:
+           seconds: 3
+       - service: light.turn_off
+         entity_id: light.kitchen_accent

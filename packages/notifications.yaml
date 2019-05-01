@@ -6,15 +6,15 @@ telegram_bot:
       - !secret telegram_chat_id2
 
 notify:
+  # send telegram message to alex
   - name: telegram_alex
     platform: telegram
     chat_id: !secret telegram_chat_id1
+  # send telegram message to spencer
   - name: telegram_spencer
     platform: telegram
     chat_id: !secret telegram_chat_id2
-#   - name: pushbullet
-#     platform: pushbullet
-#     api_key: !secret pushbullet_api_key
+  # hit API endpoint to trigger motion detection to start recording
   - name: motion_detect_nursery
     platform: rest
-    resource: http://google.com #!secret nursery_record_url
+    resource: !secret nursery_record_url

@@ -7,5 +7,5 @@ trigger:
   from: 'home'
   to: 'not_home'
 action:
-  service: switch.turn_off
-  entity_id: switch.tplink_1
+  - service: switch.turn_off
+    entity_id: switch.master_bathroom_outlet

@@ -1,0 +1,5 @@
+media_view:
+  name: Media
+  view: true
+  entities:
+    - remote.bonus_room

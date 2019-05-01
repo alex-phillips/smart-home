@@ -2,6 +2,10 @@ downstairs:
   name: Downstairs
   entities:
     - switch.front_porch
-    - switch.05200743bcddc2e9a04d
-    - switch.05200743bcddc2e99def
+    - switch.downstairs_lamp
+    - switch.breakfast_nook
     - light.kitchen_accent
+    - switch.porch_lights
+    - switch.foyer
+    - switch.bar_pendants
+    - light.dining_room

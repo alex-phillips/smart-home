@@ -7,10 +7,15 @@ switch:
   - platform: tuya_local
     name: Porch Lights
     host: 192.168.1.101
-    local_key: 47a26cab76e55eed
+    local_key: b3ec0a4e68a40eda
     device_id: 05200743bcddc2e99def
   - platform: tuya_local
     name: Downstairs Lamp
     host: 192.168.1.102
-    local_key: d6a54e23ef5d4163
+    local_key: 12687e7073dc07d0
     device_id: 05200743bcddc2e9a04d
+  - platform: tuya_local
+    name: Foyer
+    host: 192.168.1.103
+    local_key: f1832906b4c60390
+    device_id: 53023030c44f338099d2

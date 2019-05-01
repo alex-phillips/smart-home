@@ -1,5 +1,8 @@
 # Notify if motion in nursery
 alias: 'Motion detected in nursery'
+#trigger:
+#  platform: webhook
+#  webhook_id: nursery_motion_detected
 trigger:
   payload: 'ON'
   platform: mqtt
@@ -12,14 +15,13 @@ condition:
     entity_id: input_boolean.motion_detect_nursery_debounce
     state: "off"
 action:
+  #- service: script.turn_on
+  #  entity_id: script.nursery_screenshot_notification
   - service: notify.telegram_alex
-    data_template:
-      message: "Motion detected in nursery"
+    data:
+      message: "Motion detected in the nursery"
   - service: notify.telegram_spencer
-    data_template:
-      message: "Motion detected in nursery"
-  - service: notify.motion_detect_nursery
-    data_template:
-      message: "Motion detected in nursery"
+    data:
+      message: "Motion detected in the nursery"
   - service: input_boolean.turn_on
     entity_id: input_boolean.motion_detect_nursery_debounce

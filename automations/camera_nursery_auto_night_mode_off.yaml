@@ -2,28 +2,17 @@ alias: Turn night mode on cameras off at Sunrise
 trigger:
   - event: sunrise
     platform: sun
+    offset: "02:00:00"
 action:
-  # - data:
-  #     topic: "Home/camera1/ir_cut/set"
-  #     payload: "ON"
-  #   service: mqtt.publish
-  # - service: mqtt.publish
-  #   data:
-  #     topic: "Home/camera1/ir/set"
-  #     payload: "ON"
-  # - service: mqtt.publish
-  #   data:
-  #     topic: "Home/camera1/night_mode/set"
-  #     payload: "ON"
   - service: mqtt.publish
     data:
-      topic: "myhome/camera1/night_mode/auto/set"
+      topic: "myhome/wyze2/night_mode/auto/set"
       payload: "OFF"
   - service: mqtt.publish
     data:
-      topic: "myhome/camera1/night_mode/set"
+      topic: "myhome/wyze2/night_mode/set"
       payload: "OFF"
   - service: mqtt.publish
     data:
-      topic: "myhome/camera1/ir/set"
+      topic: "myhome/wyze2/ir/set"
       payload: "OFF"

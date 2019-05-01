@@ -1,0 +1,14 @@
+# # Notify if motion in nursery
+# alias: 'Motion detected in nursery'
+# trigger:
+#   payload: 'ON'
+#   platform: mqtt
+#   topic: myhome/camera1/motion
+# condition:
+#   - condition: state
+#     entity_id: input_boolean.enable_motion_detect_nursery
+#     state: "on"
+# action:
+#   - service: notify.motion_detect_nursery # despite this having a message, this is the API call to start motion recording
+#     data_template:
+#       message: "Motion detected in nursery"

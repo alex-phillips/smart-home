@@ -1,0 +1,3 @@
+shell_command:
+  nursery_screenshot: !secret nursery_screenshot_cmd
+  nursery_video_capture: !secret nursery_video_cmd

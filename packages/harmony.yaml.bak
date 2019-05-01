@@ -1,0 +1,11 @@
+# input_boolean:
+#   bonus_room_plex:
+#     name: Watch Plex
+#     initial: off
+#     icon: mdi:plex
+
+remote:
+  - platform: harmony
+    name: Bonus Room
+    host: 192.168.1.250
+    activity: Watch Plex
