@@ -8,9 +8,7 @@ homeassistant:
   whitelist_external_dirs:
     - /tmp
   packages: !include_dir_named packages
-  customize:
-    group.all_automations:
-      hidden: false
+  customize: !include includes/customize.yaml
 
 # Enable the frontend
 frontend:
