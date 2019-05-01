@@ -1,22 +1,8 @@
 title: Home
 
 resources:
-  - url: /customcards/custom_ui/compact-custom-header/compact-custom-header.js
+  - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
-
-variables:
-  custom_header: &custom_header
-    - type: "custom:compact-custom-header"
-      main_config: true
-      background: 'rgba(150, 150, 150, 0.2)'
-      menu: show
-      options: show
-      voice: show
-      notifications: clock
-      clock_format: '24'
-      clock_date: true
-      date_locale: en-gb
-      disable: false
 
 background: center / cover no-repeat url("/local/lovelace/background.png") fixed
 views:
@@ -27,7 +13,17 @@ views:
       - sensor.dark_sky_temperature
       - sensor.dark_sky_minutely_summary
     cards:
-      - *custom_header
+      - type: "custom:compact-custom-header"
+        main_config: true
+        background: 'rgba(150, 150, 150, 0.2)'
+        menu: show
+        options: show
+        voice: show
+        notifications: clock
+        clock_format: '24'
+        clock_date: true
+        date_locale: en-gb
+        disable: false
 
       - type: entities
         title: Master Bedroom
@@ -58,6 +54,8 @@ views:
 
   - title: Automations
     cards:
+      - type: "custom:compact-custom-header"
+
       - type: entities
         title: Lights and Switches
         entities:
@@ -98,7 +96,10 @@ views:
   - title: Cameras
     icon: mdi:camera
     cards:
+      - type: "custom:compact-custom-header"
+
       - type: picture-entity
         entity: camera.nursery
+
       - type: picture-entity
         entity: camera.living_room
