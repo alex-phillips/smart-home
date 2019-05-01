@@ -1,3 +1,6 @@
-- platform: ffmpeg
+- platform: generic
   name: Nursery
-  input: -rtsp_transport tcp -i rtsp://root:phillips15@192.168.1.72/live
+  still_image_url: !secret nursery_still_image_url
+  stream_url: !secret nursery_stream_url
+  username: !secret camera_username
+  password: !secret camera_password

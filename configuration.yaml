@@ -90,10 +90,11 @@ logger:
 ################################################################################
 
 ################################################################################
-# Enable ffmpeg for use of cameras
+# Cameras
 #
-# https://www.home-assistant.io/includes/ffmpeg/
+# https://www.home-assistant.io/includes/camera/
 ffmpeg:
+camera: !include_dir_merge_list includes/cameras
 ################################################################################
 
 ################################################################################

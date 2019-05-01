@@ -1,3 +1,6 @@
-- platform: ffmpeg
+- platform: generic
   name: Living Room
-  input: -rtsp_transport tcp -i rtsp://root:phillips15@192.168.1.71/live
+  still_image_url: !secret living_room_still_image_url
+  stream_url: !secret living_room_stream_url
+  username: !secret camera_username
+  password: !secret camera_password
