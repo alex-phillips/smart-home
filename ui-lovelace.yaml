@@ -72,6 +72,13 @@ views:
         entities:
           - automation.christmas_lights_off_at_midnight
           - automation.christmas_lights_on_at_8am
+  - title: Cameras
+    icon: mdi:camera
+    cards:
+      - type: picture-entity
+        entity: camera.nursery
+      - type: picture-entity
+        entity: camera.living_room
 
       # - type: entity-filter
       #   title: Device Trackers
