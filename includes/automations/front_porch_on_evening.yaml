@@ -1,4 +1,5 @@
 alias: 'Porch light on around sunset'
+initial_state: True
 trigger:
   - platform: sun
     event: sunset

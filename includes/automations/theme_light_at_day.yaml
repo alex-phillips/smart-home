@@ -1,4 +1,5 @@
 alias: 'Light theme during the day'
+initial_state: False
 trigger:
   - platform: sun
     event: sunrise

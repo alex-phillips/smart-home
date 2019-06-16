@@ -62,10 +62,11 @@ shopping_list:
 ################################################################################
 
 ################################################################################
-# Custom Updater
+# HomeAssistant Community Store
 #
-# https://github.com/custom-components/custom_updater
-custom_updater:
+# https://github.com/custom-components/hacs
+hacs:
+  token: !secret github_token
 ################################################################################
 
 ################################################################################
@@ -102,7 +103,7 @@ logger:
 #
 # https://www.home-assistant.io/includes/camera/
 ffmpeg:
-camera: !include_dir_merge_list includes/cameras
+#camera: !include_dir_merge_list includes/cameras
 ################################################################################
 
 ################################################################################
@@ -137,6 +138,14 @@ switch: !include_dir_merge_list includes/switches
 #
 # https://www.home-assistant.io/includes/light/
 light: !include_dir_merge_list includes/lights
+################################################################################
+
+################################################################################
+# Roku Players
+#
+# https://www.home-assistant.io/components/roku/
+roku:
+  - host: 192.168.1.60
 ################################################################################
 
 ################################################################################
@@ -219,7 +228,7 @@ zwave:
   device_config: !include ./zwave_device_config.yaml
 ################################################################################
 
-#######################################################################################
+################################################################################
 # The input_boolean component allows the user to define boolean values that
 # can be controlled via the frontend and can be used within conditions of
 # automation. This can for example be used to disable or enable certain
@@ -227,11 +236,12 @@ zwave:
 #
 # https://www.home-assistant.io/includes/input_boolean/
 input_boolean: !include_dir_merge_named includes/input_booleans
-#######################################################################################
+################################################################################
 
-#######################################################################################
+################################################################################
 # All Sensors that are in Home Assistant
 #
 # https://www.home-assistant.io/includes/sensor
 sensor: !include_dir_merge_list includes/sensors
-#######################################################################################
+################################################################################
+

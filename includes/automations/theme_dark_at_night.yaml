@@ -1,4 +1,5 @@
 alias: 'Dark theme at night'
+initial_state: False
 trigger:
   - platform: sun
     event: sunset

@@ -1,15 +1,18 @@
 title: Home
 
 resources:
-  - url: /customcards/github/maykar/compact-custom-header.js?track=true
+  - url: /community_plugin/compact-custom-header/compact-custom-header.js
+    type: module
+  - url: /community_plugin/roku-card/roku-card.js
     type: module
 
 background: center / cover no-repeat url("/local/lovelace/background.png") fixed
 views:
   - title: Home
+    icon: mdi:home
     badges:
-      - device_tracker.alex
-      - device_tracker.spencer
+      - person.alex
+      - person.spencer
       - sensor.dark_sky_temperature
       - sensor.dark_sky_minutely_summary
     cards:
@@ -40,7 +43,6 @@ views:
           - switch.front_porch
           - entity: switch.downstairs_lamp
             name: Lamp
-          - switch.foyer
           - switch.breakfast_nook
           - switch.bar_pendants
           - light.dining_room
@@ -51,8 +53,27 @@ views:
         show_header_toggle: true
         entities:
           - switch.sonoff2
+      - type: entities
+        title: Misc
+        entities:
+          - switch.nursery_camera
+
+  - title: Bonus Room
+    icon: mdi:television
+    cards:
+      - type: "custom:compact-custom-header"
+      - type: custom:roku-card
+        entity: media_player.living_room
+        name: Roku
+        theme: darkpurple
+        # tv: true
+        # power:
+        #   service: switch.turn_on
+        #   service_data:
+        #     entity_id: switch.bedroom_tv_power
 
   - title: Automations
+    icon: mdi:clock-outline
     cards:
       - type: "custom:compact-custom-header"
 
@@ -93,13 +114,14 @@ views:
         entities:
           - automation.christmas_lights_off_at_midnight
           - automation.christmas_lights_on_at_8am
-  - title: Cameras
-    icon: mdi:camera
-    cards:
-      - type: "custom:compact-custom-header"
+#  - title: Cameras
+#    icon: mdi:camera
+#    cards:
+#      - type: "custom:compact-custom-header"
+#
+#      - type: picture-entity
+#        entity: camera.nursery
+#
+#      - type: picture-entity
+#        entity: camera.living_room
 
-      - type: picture-entity
-        entity: camera.nursery
-
-      - type: picture-entity
-        entity: camera.living_room

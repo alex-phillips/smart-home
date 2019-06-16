@@ -11,7 +11,7 @@
   device_id: 05200743bcddc2e9a04d
 
 - platform: tuya_local
-  name: Foyer
+  name: Nursery Camera
   host: 192.168.1.103
   local_key: f1832906b4c60390
   device_id: 53023030c44f338099d2

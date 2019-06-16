@@ -6,6 +6,6 @@ downstairs:
     - switch.breakfast_nook
     - light.kitchen_accent
     - switch.porch_lights
-    - switch.foyer
+    - switch.nursery_camera
     - switch.bar_pendants
     - light.dining_room

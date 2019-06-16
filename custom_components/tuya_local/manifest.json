@@ -1,0 +1,8 @@
+{
+  "domain": "tuya_local",
+  "name": "Tuya Local",
+  "documentation": "https://github.com/codetheweb/tuyapi/blob/master/docs/SETUP.md",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": ["pytuya==7.0.2"]
+}
